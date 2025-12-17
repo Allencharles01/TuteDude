@@ -13,6 +13,7 @@ function App() {
       <header className="header">
         <h1>Task 5 – React Custom Hook (MERN)</h1>
         <p>Data fetched from our own Express + MongoDB API using paginated useFetch</p>
+        <p><i>[A Project developed by <u>Allen Charles</u> under guidance of <u>TuteDude</u>.</i>]</p>
       </header>
 
       {error && <div className="info error">Error: {error}</div>}
