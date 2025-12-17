@@ -1,18 +1,20 @@
 import { useState, useEffect, useCallback } from "react";
 
-const useFetch = (url) => {
+const BASE_URL = "https://tutedude-react-hooks.onrender.com";
+
+const useFetch = (endpoint) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const fetchData = useCallback(async () => {
-    if (!url) return;
+    if (!endpoint) return;
 
     setLoading(true);
     setError(null);
 
     try {
-      const res = await fetch(url);
+      const res = await fetch(`${BASE_URL}${endpoint}`);
 
       if (!res.ok) {
         throw new Error(`Request failed with status ${res.status}`);
@@ -25,7 +27,7 @@ const useFetch = (url) => {
     } finally {
       setLoading(false);
     }
-  }, [url]);
+  }, [endpoint]);
 
   useEffect(() => {
     fetchData();
