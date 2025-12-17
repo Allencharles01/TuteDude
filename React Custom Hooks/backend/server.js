@@ -79,63 +79,63 @@ app.get("/api/products", async (req, res) => {
         {
           "_id": "5",
           "title": "Vibrant Pink Classic Sneakers",
-          "price": 84,
+          "price": 999,
           "category": "Shoes",
           "image": "https://i.imgur.com/mcW42Gi.jpeg"
         },
         {
           "_id": "6",
           "title": "Classic Comfort Fit Joggers",
-          "price": 25,
+          "price": 2500,
           "category": "Clothes",
           "image": "https://nobero.com/cdn/shop/files/OliveGreen_a7f6444c-71b0-4298-8c2b-ed282eb16986.jpg?v=1747652139&width=940"
         },
         {
           "_id": "11",
           "title": "Classic Red Baseball Cap",
-          "price": 35,
+          "price": 599,
           "category": "Clothes",
           "image": "https://i.imgur.com/cBuLvBi.jpeg"
         },
         {
           "_id": "17",
           "title": "Classic Black T-Shirt",
-          "price": 35,
+          "price": 3400,
           "category": "Clothes",
           "image": "https://i.imgur.com/9DqEOV5.jpeg"
         },
         {
           "_id": "14",
           "title": "Classic High-Waisted Athletic Shorts",
-          "price": 43,
+          "price": 2700,
           "category": "Clothes",
           "image": "https://i.imgur.com/eGOUveI.jpeg"
         },
         {
           "_id": "16",
           "title": "Classic White Tee - Timeless Style and Comfort",
-          "price": 73,
+          "price": 1500,
           "category": "Clothes",
           "image": "https://i.imgur.com/Y54Bt8J.jpeg"
         },
         {
           "_id": "7",
           "title": "Classic Comfort Drawstring Joggers",
-          "price": 79,
+          "price": 799,
           "category": "Clothes",
           "image": "https://i.imgur.com/mp3rUty.jpeg"
         },
         {
           "_id": "13",
           "title": "Classic Olive Chino Shorts",
-          "price": 84,
+          "price": 1875,
           "category": "Clothes",
           "image": "https://i.imgur.com/UsFIvYs.jpeg"
         },
         {
           "_id": "15",
           "title": "Classic White Crew Neck T-Shirt",
-          "price": 394,
+          "price": 3940,
           "category": "Clothes",
           "image": "https://i.imgur.com/axsyGpD.jpeg"
         },
@@ -149,140 +149,140 @@ app.get("/api/products", async (req, res) => {
         {
           "_id": "22",
           "title": "Sleek Wireless Computer Mouse",
-          "price": 10,
+          "price": 1550,
           "category": "Electronics",
           "image": "https://i.imgur.com/w3Y8NwQ.jpeg"
         },
         {
           "_id": "20",
           "title": "Sleek Comfort-Fit Over-Ear Headphones",
-          "price": 28,
+          "price": 1280,
           "category": "Electronics",
           "image": "https://i.imgur.com/SolkFEB.jpeg"
         },
         {
           "_id": "19",
           "title": "Sleek Wireless Headphone & Inked Earbud Set",
-          "price": 44,
+          "price": 3440,
           "category": "Electronics",
           "image": "https://i.imgur.com/yVeIeDa.jpeg"
         },
         {
           "_id": "23",
           "title": "Sleek Modern Laptop with Ambient Lighting",
-          "price": 43,
+          "price": 1435,
           "category": "Electronics",
           "image": "https://i.imgur.com/OKn1KFI.jpeg"
         },
         {
           "_id": "21",
           "title": "Efficient 2-Slice Toaster",
-          "price": 48,
+          "price": 5480,
           "category": "Electronics",
           "image": "https://i.imgur.com/keVCVIa.jpeg"
         },
         {
           "_id": "25",
           "title": "Stylish Red & Silver Over-Ear Headphones",
-          "price": 39,
+          "price": 1439,
           "category": "Electronics",
           "image": "https://i.imgur.com/YaSqa06.jpeg"
         },
         {
           "_id": "18",
           "title": "Sleek White & Orange Wireless Gaming Controller",
-          "price": 69,
+          "price": 3569,
           "category": "Electronics",
           "image": "https://i.imgur.com/ZANVnHE.jpeg"
         },
         {
           "_id": "24",
           "title": "Sleek Modern Laptop for Professionals",
-          "price": 97,
+          "price": 9950,
           "category": "Electronics",
           "image": "https://i.imgur.com/ItHcq7o.jpeg"
         },
         {
           "_id": "29",
           "title": "Mid-Century Modern Wooden Dining Table",
-          "price": 24,
+          "price": 3224,
           "category": "Furniture",
           "image": "https://i.imgur.com/DMQHGA0.jpeg"
         },
         {
           "_id": "31",
           "title": "Modern Elegance Teal Armchair",
-          "price": 25,
+          "price": 2345,
           "category": "Furniture",
           "image": "https://i.imgur.com/6wkyyIN.jpeg"
         },
         {
           "_id": "28",
           "title": "Sleek Modern Leather Sofa",
-          "price": 53,
+          "price": 5133,
           "category": "Furniture",
           "image": "https://i.imgur.com/Qphac99.jpeg"
         },
         {
           "_id": "33",
           "title": "Modern Minimalist Workstation Setup",
-          "price": 49,
+          "price": 4599,
           "category": "Furniture",
           "image": "https://i.imgur.com/3oXNBst.jpeg"
         },
         {
           "_id": "30",
           "title": "Elegant Golden-Base Stone Top Dining Table",
-          "price": 66,
+          "price": 6936,
           "category": "Furniture",
           "image": "https://i.imgur.com/NWIJKUj.jpeg"
         },
         {
           "_id": "32",
           "title": "Elegant Solid Wood Dining Table",
-          "price": 67,
+          "price": 6700,
           "category": "Furniture",
           "image": "https://i.imgur.com/4lTaHfF.jpeg"
         },
         {
           "_id": "34",
           "title": "Modern Ergonomic Office Chair",
-          "price": 71,
+          "price": 7199,
           "category": "Furniture",
           "image": "https://i.imgur.com/3dU0m72.jpeg"
         },
         {
           "_id": "45",
           "title": "Sleek Futuristic Electric Bicycle",
-          "price": 22,
+          "price": 2299,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/BG8J0Fj.jpg"
         },
         {
           "_id": "50",
           "title": "Trendy Pink-Tinted Sunglasses",
-          "price": 38,
+          "price": 3850,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/0qQBkxX.jpg"
         },
         {
           "_id": "46",
           "title": "Sleek All-Terrain Go-Kart",
-          "price": 37,
+          "price": 3790,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/Ex5x3IU.jpg"
         },
         {
           "_id": "48",
           "title": "Sleek Olive Green Hardshell Carry-On Luggage",
-          "price": 48,
+          "price": 4835,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/jVfoZnP.jpg"
         },
         {
           "_id": "49",
           "title": "Chic Transparent Fashion Handbag",
-          "price": 61,
+          "price": 6125,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/Lqaqz59.jpg"
         },
@@ -295,64 +295,64 @@ app.get("/api/products", async (req, res) => {
         },
         {
           "_id": "51",
-          "title": "jsfksfjskjfkjsfkjskjKJFKJSKJF",
-          "price": 10100000,
+          "title": "Clear and aesthetic Drinking Glasses",
+          "price": 7500,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/TF0pXdL.jpg"
         },
         {
           "_id": "69",
           "title": "NIKE",
-          "price": 122,
+          "price": 1220,
           "category": "Miscellaneous",
           "image": "https://i.imgur.com/QkIa5tT.jpeg"
         },
         {
           "_id": "35",
           "title": "Futuristic Holographic Soccer Cleats",
-          "price": 39,
+          "price": 3900,
           "category": "Shoes",
           "image": "https://i.imgur.com/qNOjJje.jpeg"
         },
         {
           "_id": "36",
           "title": "Rainbow Glitter High Heels",
-          "price": 39,
+          "price": 3459,
           "category": "Shoes",
           "image": "https://i.imgur.com/62gGzeF.jpeg"
         },
         {
           "_id": "44",
           "title": "Classic Blue Suede Casual Shoes",
-          "price": 39,
+          "price": 3925,
           "category": "Shoes",
           "image": "https://i.imgur.com/sC0ztOB.jpeg"
         },
         {
           "_id": "37",
           "title": "Chic Summer Denim Espadrille Sandals",
-          "price": 33,
+          "price": 3300,
           "category": "Shoes",
           "image": "https://i.imgur.com/9qrmE1b.jpeg"
         },
         {
           "_id": "38",
           "title": "Vibrant Runners: Bold Orange & Blue Sneakers",
-          "price": 27,
+          "price": 2799,
           "category": "Shoes",
           "image": "https://i.imgur.com/hKcMNJs.jpeg"
         },
         {
           "_id": "41",
           "title": "Futuristic Chic High-Heel Boots",
-          "price": 36,
+          "price": 3699,
           "category": "Shoes",
           "image": "https://i.imgur.com/HqYqLnW.jpeg"
         },
         {
           "_id": "40",
           "title": "Futuristic Silver and Gold High-Top Sneaker",
-          "price": 68,
+          "price": 6859,
           "category": "Shoes",
           "image": "https://i.imgur.com/npLfCGq.jpeg"
         }
