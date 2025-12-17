@@ -53,7 +53,7 @@ app.get("/api/products", async (req, res) => {
           "title": "Neon Green Hoodie",
           "price": 1999,
           "category": "Clothing",
-          "image": "https://images.pexels.com/photos/7671166/pexels-photo-7671166.jpeg"
+          "image": "https://m.media-amazon.com/images/I/71hN00CvJnL._SY741_.jpg"
         },
         {
           "_id": "2",
@@ -88,7 +88,7 @@ app.get("/api/products", async (req, res) => {
           "title": "Classic Comfort Fit Joggers",
           "price": 25,
           "category": "Clothes",
-          "image": "https://placehold.co/600x400"
+          "image": "https://nobero.com/cdn/shop/files/OliveGreen_a7f6444c-71b0-4298-8c2b-ed282eb16986.jpg?v=1747652139&width=940"
         },
         {
           "_id": "11",
