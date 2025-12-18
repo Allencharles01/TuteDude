@@ -1,0 +1,351 @@
+/* ---------- Aesthetic Gradient UI (fixed layout + button placements) ---------- */
+
+:root{
+  --bg1:#f2f0ff;
+  --bg2:#ffeef2;
+  --bg3:#e9f7f5;
+
+  --card: rgba(255,255,255,0.72);
+  --card-glow: rgba(255,255,255,0.45);
+
+  --accent1: #8b5cf6;   /* lavender */
+  --accent2: #ec4899;   /* pink-ish */
+  --accent3: #06b6d4;   /* teal */
+  --muted: #6b7280;
+  --text: #0f172a;
+
+  --radius: 16px;
+  --shadow: 0 12px 30px rgba(18,24,37,0.06);
+  --max-width:1150px;
+}
+
+/* base */
+* { box-sizing: border-box; }
+html,body,#root { height:100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 28px;
+  font-family: Inter, system-ui;
+
+  /* --- Rich Gradient (No White Patches) --- */
+  background: radial-gradient(circle at top left,
+      rgba(139, 92, 246, 0.22) 0%,
+      rgba(236, 72, 153, 0.18) 35%,
+      rgba(6, 182, 212, 0.18) 75%,
+      rgba(6, 182, 212, 0.10) 100%
+    ),
+    linear-gradient(
+      135deg,
+      #eae7ff 0%,
+      #ffe6f0 40%,
+      #e7faf6 100%
+    );
+
+  background-attachment: fixed; /* smooth + premium effect */
+  background-size: cover;
+  color: var(--text);
+}
+
+
+/* wrapper */
+.app { max-width:var(--max-width); margin:0 auto; }
+
+/* topbar */
+.topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:26px; }
+.brand { display:flex; gap:12px; align-items:center; }
+.logo{
+  width:52px; height:52px; border-radius:14px;
+  background: linear-gradient(135deg,var(--accent1),var(--accent2));
+  display:flex; align-items:center; justify-content:center; color:white; font-weight:800; font-size:18px;
+  box-shadow:0 6px 18px rgba(139,92,246,0.28);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+.h1{ font-size:30px; margin-bottom:4px; font-weight:800; }
+.h2{ font-size:14px; color:var(--muted); }
+
+/* layout */
+.layout { display:grid; grid-template-columns:360px 1fr; gap:22px; align-items:start; }
+
+/* card basics */
+.card {
+  position:relative;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: var(--shadow);
+  border:1px solid rgba(255,255,255,0.28);
+  backdrop-filter: blur(8px);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow:0 18px 45px rgba(0,0,0,0.06); }
+
+/* small badge in top-right of a card (used for "Add" bubble) */
+.badge-top {
+  position:absolute;
+  right:14px;
+  top:14px;
+  background: linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:white;
+  padding:8px 10px;
+  border-radius:12px;
+  font-weight:800;
+  font-size:13px;
+  box-shadow: 0 8px 20px rgba(139,92,246,0.18);
+}
+
+/* form header text */
+.title-lg { font-weight:800; font-size:16px; color:var(--text); }
+.subtitle { color:var(--muted); font-size:13px; margin-top:6px; }
+
+/* form rows: ensure inputs and buttons line up cleanly */
+.form-row {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+/* ensure inputs flex nicely (for mixed input + button rows) */
+.input, .select, .textarea {
+  flex: 1 1 auto;
+  min-width: 0; /* prevents overflow inside flex */
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.9);
+  font-size:14px;
+}
+
+/* when an input is used as a fixed-width element (eg. select or small buttons) override width */
+.form-row .select-fixed { flex: 0 0 auto; width:150px; }
+.form-row .btn-fixed { flex: 0 0 auto; }
+
+/* input focus */
+.input:focus, .select:focus, .textarea:focus {
+  outline:none;
+  border-color: var(--accent3);
+  box-shadow: 0 8px 24px rgba(6,182,212,0.12);
+}
+
+/* buttons */
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 18px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  font-weight:800;
+  color:white;
+
+  /* ✨ Premium multi-layer gradient */
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  background-size: 200% 200%;
+
+  /* ✨ Soft glow + depth */
+  box-shadow:
+    0 6px 16px rgba(139,92,246,0.35),
+    0 0 14px rgba(255,255,255,0.25) inset;
+
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 12px 25px rgba(139,92,246,0.45),
+    0 0 18px rgba(255,255,255,0.25) inset;
+  background-position: right center;
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow:
+    0 4px 12px rgba(139,92,246,0.28),
+    0 0 12px rgba(255,255,255,0.3) inset;
+}
+
+.btn.small { padding:6px 10px; font-size:13px; }
+.btn.ghost {
+  background:transparent;
+  color:var(--text);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow:none;
+}
+
+/* ensure button used in form-row stays its size and doesn't stretch */
+.form-row .btn { flex: 0 0 auto; }
+
+/* right header + meta */
+.right-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.meta { color:var(--muted); font-size:13px; }
+
+/* todo grid */
+.grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+/* todo card specifics */
+.todo {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  padding:16px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,250,252,0.95));
+  border:1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 8px 28px rgba(18,24,37,0.04);
+}
+.todo-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+.todo-left { display:flex; gap:12px; align-items:flex-start; min-width:0; }
+
+/* checkbox */
+.chk {
+  width:20px; height:20px; border-radius:6px; border:2px solid rgba(0,0,0,0.06);
+  display:inline-flex; align-items:center; justify-content:center; cursor:pointer; color:white;
+  background:transparent; flex:0 0 20px;
+}
+.chk.checked { background: linear-gradient(90deg,var(--accent3),var(--accent2)); border-color:transparent; }
+
+/* text */
+.todo-title { font-weight:800; font-size:15px; color:#071124; word-break:break-word; }
+.todo-desc { color:var(--muted); font-size:13px; min-height:36px; white-space:pre-wrap; }
+
+/* badges */
+.badge {
+  padding:6px 10px; border-radius:999px; font-weight:800; font-size:12px; color:white;
+}
+.badge.low { background: linear-gradient(90deg,#94a3b8,#64748b); }
+.badge.medium { background: linear-gradient(90deg,#f5c06e,#f59e0b); }
+.badge.high { background: linear-gradient(90deg,#ff9d8b,#ef4444); }
+
+/* action buttons inline */
+.actions { display:flex; gap:8px; align-items:center; margin-top:6px; }
+.icon {
+  width:36px; height:36px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid rgba(0,0,0,0.04); background:white; cursor:pointer;
+}
+.icon:hover { transform:translateY(-3px); box-shadow:0 10px 22px rgba(0,0,0,0.06); }
+
+/* empty/placeholder */
+.empty {
+  padding:36px; text-align:center; color:var(--muted);
+  border-radius:12px; border:1px dashed rgba(0,0,0,0.06); background: rgba(255,255,255,0.6);
+}
+
+/* spinner */
+.spinner { width:42px; height:42px; border-radius:50%; border:5px solid rgba(255,255,255,0.6); border-top-color:var(--accent2); margin:18px auto; animation:spin .9s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* toast */
+.toast { position:fixed; right:20px; bottom:20px; background:var(--accent2); color:white; padding:10px 14px; border-radius:10px; box-shadow:0 12px 28px rgba(0,0,0,0.25); font-weight:800; }
+
+/* modal */
+.modal-backdrop { position:fixed; inset:0; background:rgba(2,6,23,0.45); display:flex; align-items:center; justify-content:center; z-index:50; }
+.modal { width:520px; max-width:92%; background:var(--card); border-radius:12px; padding:18px; box-shadow:var(--shadow); }
+
+/* small screens */
+@media (max-width:880px){
+  .layout { grid-template-columns: 1fr; }
+  .left-col { position: static; }
+  .badge-top { right:10px; top:10px; padding:6px 8px; font-size:12px; }
+  .logo { width:44px; height:44px; font-size:16px; }
+}
+.card + .card {
+  margin-top: 26px; /* perfect balanced spacing */
+}
+/* Priority button group (upgraded visuals) */
+.priority-group { display:flex; gap:12px; margin-bottom:14px; }
+
+/* base button */
+.priority-btn {
+  padding:10px 16px;
+  border-radius:14px;
+  font-weight:800;
+  font-size:14px;
+  cursor:pointer;
+  border:0;
+  flex:1;
+  color:#fff;
+  letter-spacing:0.2px;
+  transition: transform .18s ease, box-shadow .18s ease, filter .12s;
+  position:relative;
+  overflow:visible;
+  box-shadow: 0 6px 18px rgba(7,12,34,0.06);
+}
+
+/* subtle glossy stripe (pseudo-element) */
+.priority-btn::after{
+  content:"";
+  position:absolute;
+  left:6%;
+  right:6%;
+  top:6%;
+  height:36%;
+  border-radius:10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
+  pointer-events:none;
+  transform: translateY(-2px);
+  opacity:0.9;
+}
+
+/* low - calm green */
+.priority-btn.low {
+  background: linear-gradient(135deg,#8ce27a 0%, #57c23b 60%);
+  color: #063d02;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 6px 18px rgba(35,99,37,0.08);
+}
+
+/* medium - warm gold */
+.priority-btn.medium {
+  background: linear-gradient(135deg,#ffe08a 0%, #f7bf38 60%);
+  color: #553f02;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.18);
+  box-shadow: 0 6px 18px rgba(165,118,21,0.08);
+}
+
+/* high - coral / red */
+.priority-btn.high {
+  background: linear-gradient(135deg,#ff8b7a 0%, #ff4b4b 60%);
+  color: #370806;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.14);
+  box-shadow: 0 6px 18px rgba(164,44,44,0.10);
+}
+
+/* hover (all) */
+.priority-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.03);
+  box-shadow: 0 12px 28px rgba(10,14,30,0.10);
+}
+
+/* active/selected — strong halo + inner glow */
+.priority-btn.active {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow:
+    0 18px 40px rgba(10,14,30,0.14),
+    0 0 28px rgba(255,255,255,0.06) inset,
+    0 0 18px rgba(255,255,255,0.06);
+  outline: none;
+}
+
+/* active halo color variants (soft colored ring) */
+.priority-btn.low.active { box-shadow:
+    0 18px 40px rgba(34,85,32,0.18),
+    0 0 28px rgba(139,255,179,0.12) inset; }
+.priority-btn.medium.active { box-shadow:
+    0 18px 40px rgba(165,110,20,0.18),
+    0 0 28px rgba(255,239,172,0.12) inset; }
+.priority-btn.high.active { box-shadow:
+    0 18px 40px rgba(164,44,44,0.18),
+    0 0 28px rgba(255,180,180,0.12) inset; }
+
+/* press */
+.priority-btn:active {
+  transform: translateY(-1px) scale(0.995);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* small icon spacing if you add icons/emojis */
+.priority-btn .icon { margin-right:8px; transform:translateY(-1px); }
